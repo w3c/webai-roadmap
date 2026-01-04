@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>MyNote</title>
+    <title>Roadmap for AI Technologies on Web </title>
     <script
       defer
       class="remove"
@@ -18,10 +18,11 @@
         editors: [
           {
             name: "Ruoxi Ran",
+            company: "W3C",
             w3cid: "100586",
           },
         ],
-        group: "webai", // find your group at https://respec.org/w3c/groups/
+        group: "ig/webai", // find your group at https://respec.org/w3c/groups/
         github: {
           repoURL: "w3c/webai-roadmap",
           branch: "main",
@@ -49,41 +50,124 @@
       <p class="ednote">This roadmap is intended as a living document and may evolve as the technology landscape develops.</p>
     </section>
     <section>
-      <h2>AI Capabilities in the Web Platform</h2>
-      <p>These technologies provide the fundamental infrastructure required to execute machine learning tasks directly within the
-      browser, utilizing underlying hardware for maximum efficiency.</p>
-      <p></p>
+      <h2>The Web & AI Landscape</h2>
+      This section introduces several thematic areas where the Web platform intersects with emerging AI-related technologies.
+      The themes reflect patterns observed across ongoing work at W3C and in the broader ecosystem. Each area highlights
+      architectural considerations and topics that may require further analysis or coordination. 
+      <section>
+        <h2>AI Capabilities in the Web Platform</h2>
+        <p>These technologies provide the fundamental infrastructure required to execute machine learning tasks directly within the
+        browser, utilizing underlying hardware for maximum efficiency.</p>
+        <p><a href="https://www.w3.org/TR/webnn/">Web Neural Network API</a> (WebNN): This is a dedicated low-level API for neural network inference. It allows the browser to communicate directly with
+        hardware accelerators like GPUs, CPUs, or dedicated NPUs (Neural Processing Units). In the context of Web AI, WebNN is
+        the bridge that enables high-performance, low-latency execution of machine learning models locally on a user's device.</p>
+        <p><a href="https://www.w3.org/TR/webgpu/">WebGPU</a>: WebGPU is the successor to WebGL, providing modern features for high-performance graphics and data-parallel computation.
+        For Web AI, it is essential because most modern AI frameworks (like TensorFlow.js or Transformers.js) use WebGPU to
+        handle the massive parallel processing required for training and running large models in the browser.</p>
+        <p><a href="https://www.w3.org/TR/wasm-core-2/">WebAssembly Core Specification</a> (WASM): WebAssembly allows code written in languages like C++ or Rust to run at near-native speeds on the web. It enables developers to port heavy machine learning libraries and complex mathematical
+        kernels to the browser without the performance overhead of traditional JavaScript.</p>
+        <p><a href="https://www.w3.org/TR/webrtc/">WebRTC: Real-Time Communication in Browsers</a>: This standard enables real-time communication of audio, video, and data. Its relationship with Web AI is primarily found
+        in real-time media processing, such as background blur in video calls, noise cancellation, or real-time transcription,
+        all of which often happen on-device via the browser.</p>
+      
+
+        <p class="ednote">add a table to show the status of each specification.</p>
+
+        
 
 
-    </section>
-    <section>
-      <h2>Data and Semantics</h2>
-      <p>AI systems rely on the organization and expression of data. W3C’s long-standing work in the Semantic Web provides the
-      structured framework necessary for AI to interpret information accurately.</p>
+      </section>
+      <section>
+        <h2>Data and Semantics</h2>
+        <p>AI systems rely on the organization and expression of data. W3C’s long-standing work in the Semantic Web provides the
+        structured framework necessary for AI to interpret information accurately.</p>
+        <p><a href="https://www.w3.org/RDF/">RDF</a>:</p>
+        <p><a href="https://www.w3.org/TR/json-ld11/">JSON-LD</a>: This is a lightweight format for linked data using JSON. It makes web data machine-readable. In the Web AI ecosystem,
+        JSON-LD is crucial for Semantic SEO and helping AI agents parse and understand the context of a webpage's content
+        without needing complex scraping or unstructured text analysis.</p>
+        <p><a href="">to be add ...</a></p>
+        
+        
+        <p class="ednote">add a table to show the status of each specification.</p>
 
-    </section>
-    <section>
-      <h2>Web and AI Agents</h2>
-      <p>Software agents capable of performing tasks on behalf of users are receiving increasing attention. These agents may
-      navigate Web content, invoke APIs, or interact with services in semi-autonomous ways. The Web architecture provides a
-      natural environment for such systems, but also introduces new challenges related to permissions, capabilities, user
-      control, and predictable behavior. This subsection outlines work areas and technologies relevant to agent interactions
-      in Web contexts.</p>
-    </section>
-    <section>
-      <h2>Trust and Identity</h2>
-      <p></p>
-    </section>
-    <section>
-      <h2>Safety, Security, and Privacy</h2>
-    </section>
-    <section>
-      <h2>AI Ethics and Social Impact</h2>
+      </section>
+      <section>
+        <h2>Web and AI Agents</h2>
+        <p>Software agents capable of performing tasks on behalf of users are receiving increasing attention. These agents may
+        navigate Web content, invoke APIs, or interact with services in semi-autonomous ways. The Web architecture provides a
+        natural environment for such systems, but also introduces new challenges related to permissions, capabilities, user
+        control, and predictable behavior. This subsection outlines work areas and technologies relevant to agent interactions
+        in Web contexts.</p>
+        <p><a href="https://www.w3.org/TR/webdriver2/">WebDriver</a>: This is a remote control interface that enables introspection and control of user agents (browsers). For Web AI,
+        WebDriver is often the tool used to train AI agents to navigate websites, automate form-filling, or perform
+        "browser-use" tasks where the AI acts as a human would within the interface.</p>
+        <p><a href="https://www.w3.org/WoT/documentation/">WoT</a>:The Web of Things aims to counter fragmentation in IoT. Its connection to Web AI lies in providing a standardized way
+        for AI agents to interact with physical devices (like smart home sensors) via standard web protocols, essentially giving
+        the AI hands in the physical world.</p>
+        <p><a href="https://github.com/webmachinelearning/webmcp">WebMCP</a>: </p>
+        <p><a href="https://w3c-cg.github.io/webagents/TaskForces/Interoperability/Reports/report-interoperability.html">Multi-Agent
+          System</a>: </p>
+        <p><a href="https://w3c-cg.github.io/ai-agent-protocol/protocol.html">AI Agent Protocol</a>: </p>
+        
+        
+        <p class="ednote">add a table to show the status of each specification.</p>
+      </section>
+      <section>
+        <h2>Trust and Identity</h2>
+        <p></p>
+        <p><a href="https://www.w3.org/TR/did-1.0/">Decentralized Identifiers (DIDs)</a>: Decentralized Identifiers are a new type of identifier that enables verifiable, decentralized digital identity. In Web
+        AI, DIDs help users maintain a persistent and secure identity that is not controlled by a single central authority,
+        which is vital when interacting with AI agents that may need to verify a user's identity.</p>
+        <p><a href="https://www.w3.org/TR/vc-data-model-2.0/">Verifiable Credentials Data Model</a>: Verifiable Credentials provide a mechanism to express credentials on the Web in a manner that is cryptographically
+        secure and privacy-preserving. This relates to Web AI by allowing users to prove things about themselves (like age or
+        certifications) to an AI service without sharing unnecessary personal data.</p>
+        <p><a href="https://www.w3.org/TR/fedcm-1/">Federated Credential Management API</a>: Federated Credential Management is an API for privacy-preserving identity federation. As Web AI becomes more
+        personalized, FedCM allows for seamless login and identity verification while protecting users from the tracking risks
+        often associated with third-party identity providers.</p>
+        
+        
+        <p class="ednote">add a table to show the status of each specification.</p>
+      </section>
+      <section>
+        <h2>Safety, Security, and Privacy</h2>
+        <p><a href="https://www.w3.org/TR/privacy-principles/">Privacy Principles</a>: These are high-level guidelines for web technology development. In the context of Web AI, these principles ensure that
+        features like local model execution do not inadvertently create new ways to "fingerprint" a user or leak sensitive data
+        from the browser's memory.</p>
+        <p><a href="https://github.com/w3c-cg/threat-modeling/blob/main/models/ai-in-browser.md">AI Threat modeling</a>: This is a specific exploration of security risks associated with running AI in the browser. It helps developers
+        understand the unique risks of Web AI, such as prompt injection at the browser level or side-channel attacks that could
+        leak information about the model or the data it is processing</p>
+        
+        
+        <p class="ednote">add a table to show the status of each specification.</p>
+      </section>
+      <section>
+        <h2>AI Ethics and Impact</h2>
+        <p><a href="https://www.w3.org/TR/webmachinelearning-ethics/">Ethical Principles for Web Machine Learning</a>: This document outlines how to build ML features responsibly. For Web AI, it focuses on issues like fairness,
+        accountability, and transparency, ensuring that browser-based AI doesn't reinforce societal biases or perform
+        discriminatory profiling.</p>
+        <p><a href="https://w3ctag.github.io/user-agents/">Web User Agents</a>: This explains the role of software that acts on behalf of a user. It is critical to define where
+        the AI assistant ends and the user agent begins, ensuring the user remains in control of their digital
+        experience rather than being directed by an opaque AI</p>
+        <p><a href="https://www.w3.org/reports/ai-web-impact/">AI & the Web: Understanding and managing the impact of Machine Learning models on the Web</a>: This document proposes an analysis of the systemic impact of AI systems, and in particular ones based on Machine
+        Learning models, on the Web, and the role that Web standardization may play in managing that impact.</p>
+        <p><a href="https://github.com/w3c/ai-web-impact/blob/main/agent-report.md">The Agentic Web: risks and opportunities</a>: This document proposes an analysis of the potential impact of the deployment of AI agents on the Web, the role that web
+        standardization may play in managing that impact, and how to provide users of these tools with mission-aligned
+        guardrails.</p>
+      
+        
+        
+        <p class="ednote">add a table to show the status of each specification.</p>
+      </section>
+
+      <section>
+        <h2>AI and Accessibility</h2>
+        <p><a href="https://w3c.github.io/ai-accessibility/">AI and Accessibility</a>:</p>
+        
+        
+        <p class="ednote">add a table to show the status of each specification.</p>
+      </section>
     </section>
 
-    <section>
-      <h2>Accessibility and Inclusion</h2>
-    </section>
     <section>
       <h2>Others</h2>
     </section>
